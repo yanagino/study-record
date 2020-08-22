@@ -1,0 +1,64 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.btn a {
+  color: #f8f8f8;
+}
+
+.btn-default a {
+  color: #2481eb;
+}
+
+#align-middle {
+  vertical-align: middle;
+}
+
+.search-form {
+  margin-bottom: 10px;
+}
+
+.custom-table{
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 30px;
+}
+
+.custom-table tr{
+  border-bottom: solid 2px #c7c7c7;
+}
+
+.custom-table tr:last-child{
+  border-bottom: none;
+}
+
+.custom-table th{
+  position: relative;
+  text-align: left;
+  width: 30%;
+  background-color: #52c2d0;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.custom-table th:after{
+  display: block;
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  top:calc(50% - 10px);
+  right:-10px;
+  border-left: 10px solid #52c2d0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+}
+
+.custom-table td{
+  text-align: left;
+  width: 70%;
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+  padding: 10px 0;
+}

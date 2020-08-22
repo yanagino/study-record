@@ -1,0 +1,18 @@
+ja:
+  activerecord:
+    attributes:
+      record: 
+        date: 日付
+        hour: 勉強時間
+        content: やったこと
+        memo: メモ
+        study: 覚えたこと
+
+ja:
+  activerecord:
+    attributes:
+      user: 
+        name: ニックネーム
+        email: メールアドレス
+        password: パスワード
+        password_confirmation: 確認用

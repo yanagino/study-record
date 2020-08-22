@@ -1,0 +1,62 @@
+<div class="row">
+<div class="col-xs-10 col-xs-offset-1">
+<div class="text-center">
+
+  <h2><span class="glyphicon glyphicon-apple"></span><%= @current_user.name %></h2>
+  <div>
+  </div>
+
+  <table class="custom-table">
+  <tr>
+    <th>累計</th>
+    <td class="lead"><strong><%= @sum_total %>時間</strong></td>
+  </tr>
+  <tr>
+    <th>今月</th>
+    <td class="lead"><strong><%= @sum_monthly %>時間</strong></td>
+  </tr>
+  <tr>
+    <th>今週</th>
+    <td class="lead"><strong><%= @sum_weekly %>時間</strong></td>
+  </tr>
+</table>
+
+  <br>
+
+  <div class="btn btn-success btn-block btn-lg" style="a:white;">
+    <%= link_to("/records/new") do %>
+      <span class="glyphicon glyphicon-pencil"></span> 勉強時間を記録する
+    <% end %>
+  </div>
+
+  <h3 class="text-primary">
+  <strong>
+    <span class="glyphicon glyphicon-triangle-bottom"></span>
+    <span class="glyphicon glyphicon-triangle-bottom"></span>
+      勉強の記録
+    <span class="glyphicon glyphicon-triangle-bottom"></span>
+    <span class="glyphicon glyphicon-triangle-bottom"></span>
+  </strong>
+  </h3>
+
+  <% unless @display_records.blank? %>
+    <div class="search-form form-inline text-right">
+      <%= form_tag("/records/search", method: :get) do %>
+       <input name="keyword" placeholder="キーワード検索" class="input-sm">
+       <input type="submit" value="検索">
+      <% end %>
+    </div>
+
+    <ul class="list-group">
+    <% @display_records.each do |record| %>
+     <li class="list-group-item"><%= link_to(record.date, "/records/#{record.id}") %></li>
+    <% end %>
+    </ul>
+    <%= paginate @display_records %>
+  <% else %>
+    <p>まだ登録されていません</p>
+  <% end %>
+
+</div>
+</div>
+</div>

@@ -1,0 +1,24 @@
+// Place all the styles related to the records controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.form-group textarea {
+  font-size: 14px;
+}
+
+.table td {
+  word-break : break-all;
+}
+
+div .form-essential {
+  margin-bottom: 5px;
+}
+
+.text-essential {
+  color: red;
+  margin-bottom: 15px;
+}
+
+.show-table .white {
+  background-color: white;
+}

@@ -1,0 +1,14 @@
+<nav class="navbar navbar-inverse" style="margin: 0; border-radius: 0;">
+    <div class="navbar-header">
+      <% if @current_user %>
+		    <a class="navbar-brand" href="/mypage"><span class="glyphicon glyphicon-send"></span> STUDY RECORD</a>
+        <span class="navbar-brand pull-right">
+          <%= link_to("/logout", { method: "POST" }) do %>
+            <span class="glyphicon glyphicon-log-out"></span>ログアウト
+          <% end %>
+        </span>
+      <% else %>
+        <a class="navbar-brand" href="/"><span class="glyphicon glyphicon-send"></span> STUDY RECORD</a>
+      <% end %>
+    </div>
+</nav>

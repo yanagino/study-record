@@ -1,0 +1,46 @@
+<div class="row">
+<div class="col-xs-10 col-xs-offset-1">
+
+<div class="text-center">
+  <h2>修正する</h2>
+</div>
+
+<%= form_for(@record, url: "/records/#{@record.id}") do |f| %>
+
+  <%= render 'layouts/error_messages', model: f.object %>
+
+  <div class="form-group form-essential">
+    <%= f.label :date, "日付" %>
+    <%= f.date_field :date, class: "form-control" %>
+  </div>
+  <p class="text-essential">※必須</p>
+
+  <div class="form-group form-essential">
+    <%= f.label :hour, "勉強時間" %>
+    <%= f.number_field :hour, step: "0.1", class: "form-control" %>
+  </div>
+  <p class="text-essential">※必須</p>
+
+  <div class="form-group">
+    <%= f.label :content, "やったこと" %>
+    <%= f.text_area :content, class: "form-control", cols: "45", rows: "10" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :memo, "メモ" %>
+    <%= f.text_area :memo, class: "form-control", cols: "45", rows: "10" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :study, "覚えたこと" %>
+    <%= f.text_area :study, class: "form-control", cols: "45", rows: "10" %>
+  </div>
+
+  <%= f.submit "修正", class: "btn btn-success btn-block" %>
+
+<% end %>
+</div>
+</div>
+
+<br>
+<br>
